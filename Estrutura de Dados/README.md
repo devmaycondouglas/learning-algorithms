@@ -99,3 +99,27 @@ print(q.get()) # 5
 ```
 
 OBS: No final das contas a Queue em Python implementa a Dequeue.
+
+## Hashmap
+
+O hashmap no **Python** é conhecido de **dictionary**, e o hashmap utiliza da estratégia de Hashing Function para encontrar "entries" dentro do "array", o hash function faz um cálculo utilizando a chave para transforma em um índice na hash table e ficar mais fácil de encontrar o valor desejado. Sendo assim a busca de um dado dentro do Hashmap seria de O(1), só que raramente pode acontecer de aumentar a complexidade para O(n) dependendo das "Colisões" que podem acontecer de por exemplo ao calcular 5 chaves o valor resultante pode ser igual para essas 5 chaves, então teóricamente iriam dividir esse índice, só que é feito uma sub-estrutura, podendo ser um array ou uma linked list, e quando for buscar um desses valores das 5 chaves ele teria que fazer uma busca de O(n) para encontrar o valor desejado, porém normalmente quando acontece esses tipos de colisões, a sub-estrutura criada é bem pequena ou é para ser !? Sendo assim é considerado a busca de um dado dentro dessa estrutura O(n) por conta exatamente disso, quando há uma sub-estrutura ela é tão pequena que não chega a demorar para fazer a busca. E assim entra o conceito de "Load Factor" que nada mais é que a diferença da quantidade de dados que temos e a nossa estrutura de dados e então normalmente é feito ali na implementação a escolha da quantidade de Load Factor da nossa estrutura e entào controlar o tamanho da estrutura do hasmap, no caso digamos que o tamanho escolhido para o Load Function é de 70%, então quando os dados popularem 70% do hashmap, vai ser aumentado o tamanho e talvez até mude de local na memória. 
+
+## Stack (LIFO - Last In First Out)
+
+É uma estrutura simples, onde a implementação se assemelha a uma pilha de livros na vida real, imagina criar uma pilha de livros onde o primeiro a ser empilhado será o último a sair da pilha.
+
+## Binary Tree
+
+A árvore binário tem os seguintes elementos, são elas, Head (Node) e contém os Nodes da esquerda e direita, Left (Node), Right (Node). A estrutura tende o conceito de dividir os valores para melhorar a busca por elementos, este tipo de estrutura é muito utilizada nos problemas de buscas.
+
+## Grafos
+
+O Grafo é tradicionalmente entendido algo que tem nodo e vértices e cada vértice tem um peso, normalmente é utilizado este tipo de estrutura para em desafios onde devesse chegar em um ponto por um caminho mais curto. Exemplo, quando precisa criar um algoritmo de network ou google maps, etc ...
+
+## Trie
+
+É um tipo de Tree, e também é conhecida como prefix-tree é conhecido por esse nome por conta que essa estrutura vai armazenando os prefixos para baixo, então imagina que dentro dessa estrutura quero armazenar a palavra *teste*, neste caso a árvore deveria se comportar dessa forma: * -> t -> te -> tes -> test -> teste. Normalmente este tipo de estrutura é utilizado em algoritmo de autocomplete.
+
+## B-Tree
+
+É uma árvore auto balanciável que deve ser difinida um número de chaves e um número de keys. Então no primeiro nível tem as chaves que ainda no primeiro nível tem a referência para os children (os nodos que estão abaixo) o número de children sempre vai ser um a mais que o número de chaves.
