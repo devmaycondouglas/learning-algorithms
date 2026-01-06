@@ -163,3 +163,26 @@ result = exponential_search(arr, target)
 
 print(f'Element found at index {result}')
 ```
+
+## Hashmap
+
+O Hashmap é um solução bem versátil para resolver um problema, problemas onde são necessários o armazenamento de valores utilizando um hashmap (em python utilizando dict), esse problema é bem provável que seja resolvido com hashmap.
+
+Caso: Dado um string 's', deve ser devolvido o indíce da primeira letra que está contida na string somente uma vez.
+
+```python
+def search_letter_repeat_onde(s):
+  hashmap = {}
+
+  for index, letter in enumerate(s):
+    if hashmap.get(letter):
+      hashmap[letter][1] += 1
+    else:
+      hashmap[letter] = [index, 1]
+  
+  for _, value in hashmap.items():
+    if value[1] == 1:
+      return value[0]
+
+  return -1
+```
